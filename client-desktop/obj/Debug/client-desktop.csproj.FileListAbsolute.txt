@@ -1,0 +1,10 @@
+C:\Users\Joao Paulo\Desktop\PROJETOS\E-COMMERCE\client-desktop\bin\Debug\client-desktop.exe.config
+C:\Users\Joao Paulo\Desktop\PROJETOS\E-COMMERCE\client-desktop\bin\Debug\client-desktop.exe
+C:\Users\Joao Paulo\Desktop\PROJETOS\E-COMMERCE\client-desktop\bin\Debug\client-desktop.pdb
+C:\Users\Joao Paulo\Desktop\PROJETOS\E-COMMERCE\client-desktop\obj\Debug\client-desktop.csproj.AssemblyReference.cache
+C:\Users\Joao Paulo\Desktop\PROJETOS\E-COMMERCE\client-desktop\obj\Debug\client_desktop.Form1.resources
+C:\Users\Joao Paulo\Desktop\PROJETOS\E-COMMERCE\client-desktop\obj\Debug\client_desktop.Properties.Resources.resources
+C:\Users\Joao Paulo\Desktop\PROJETOS\E-COMMERCE\client-desktop\obj\Debug\client-desktop.csproj.GenerateResource.cache
+C:\Users\Joao Paulo\Desktop\PROJETOS\E-COMMERCE\client-desktop\obj\Debug\client-desktop.csproj.CoreCompileInputs.cache
+C:\Users\Joao Paulo\Desktop\PROJETOS\E-COMMERCE\client-desktop\obj\Debug\client-desktop.exe
+C:\Users\Joao Paulo\Desktop\PROJETOS\E-COMMERCE\client-desktop\obj\Debug\client-desktop.pdb
