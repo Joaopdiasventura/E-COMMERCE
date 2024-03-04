@@ -1,3 +1,4 @@
+import * as bcrypt from "bcrypt";
 import { Injectable } from "@nestjs/common";
 import { CreateUserDto } from "./dto/create-user.dto";
 import { LoginUserDto } from "./dto/login-user.dto";
@@ -8,7 +9,7 @@ import { User } from "./entities/user.entity";
 export class UserService {
 	constructor(private readonly prisma: PrismaService) {}
 
-	async findUser (email: string): Promise<User | string> {
+	async findUser (email: string): Promise<User | void> {
 		const user = await this.prisma.user.findUnique({
 			where: { email: email },
 		});
@@ -26,16 +27,17 @@ export class UserService {
 		return user;
 	}
 
-	async login(Dto: LoginUserDto) {
+	async login(Dto: LoginUserDto): Promise<User | string> {
 		const user = await this.findUser(Dto.email);
+
 		if (!user) return "Usuário não encontrado";
     
-		if (user.password == Dto.password) return user;
+		if (bcrypt.compare(user.password, Dto.password)) return user;
 
 		return "Senha incorreta";
 	}
 
-	async remove(email: string) {
+	async remove(email: string): Promise<string> {
 		const user = await this.findUser(email);
 		if (!user) return "Usuário não encontrado";
 

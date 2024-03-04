@@ -1,5 +1,5 @@
-import bcrypt from "bcrypt";
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import * as bcrypt from "bcrypt";
+import { Controller, Post, Body, Param, Delete } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { LoginUserDto } from "./dto/login-user.dto";
@@ -10,6 +10,7 @@ export class UserController {
 
   @Post("register")
   async register(@Body() createUserDto: CreateUserDto) {
+    createUserDto.password = bcrypt.hashSync(createUserDto.password, 10);
     return await this.userService.register(createUserDto);
   }
 

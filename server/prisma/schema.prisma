@@ -10,7 +10,8 @@ datasource db {
 model User {
   name     String     @db.VarChar(30)
   email    String     @id @db.VarChar(50)
-  password String     @db.VarChar(30)
+  password String     @db.VarChar(100)
+  adress   String     @db.VarChar(13)
   money    Float      @default(100.0)
   purchase Purchase[]
   product  Product[]
@@ -30,7 +31,6 @@ model Product {
 model Purchase {
   id               Int                @id @default(autoincrement())
   value            Float
-  adress            String            @db.VarChar(100)
   fk_user_email    String             @db.VarChar(50)
   User             User?              @relation(fields: [fk_user_email], references: [email])
   Purchase_product Purchase_product[]
