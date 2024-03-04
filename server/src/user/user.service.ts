@@ -7,10 +7,17 @@ import { User } from "./entities/user.entity";
 @Injectable()
 export class UserService {
 	constructor(private readonly prisma: PrismaService) {}
-	async register(Dto: CreateUserDto): Promise<User | string> {
-		const existUser = await this.prisma.user.findUnique({
+
+	async findUser (email: string): Promise<User | string> {
+		const user = await this.prisma.user.findUnique({
 			where: { email: Dto.email },
 		});
+
+		if (user) return user
+	}
+
+	async register(Dto: CreateUserDto): Promise<User | string> {
+		const existUser = await this.findUser(Dto.email);
 
 		if (existUser) return "Já existe um usuário registrado nesse email";
 
@@ -20,9 +27,7 @@ export class UserService {
 	}
 
 	async login(Dto: LoginUserDto) {
-		const user = await this.prisma.user.findUnique({
-			where: { email: Dto.email },
-		});
+		const user = await this.findUser(Dto.email);
 		if (!user) return "Usuário não encontrado";
     
 		if (user.password == Dto.password) return user;
@@ -31,10 +36,10 @@ export class UserService {
 	}
 
 	async remove(email: string) {
-		const user = await this.prisma.user.findUnique({ where: { email } });
+		const user = await this.findUser(email);
 		if (!user) return "Usuário não encontrado";
 
-    await this.prisma.user.delete({where: {email}});
-    return "Usuário deletado"
+    	await this.prisma.user.delete({where: {email}});
+    	return "Usuário deletado"
 	}
 }
