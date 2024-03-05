@@ -91,10 +91,16 @@ namespace client_desktop
                 if (response.IsSuccessStatusCode)
                 {
                     string jsonResponse = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine(jsonResponse);
+                    if (jsonResponse.StartsWith("{\"message\":"))
+                    {
+                        MessageBox.Show("Cep não encontrado");
+                        return;
+                    }
 
                     string[] data = JsonConvert.DeserializeObject<string[]>(jsonResponse);
 
-                    this.response.Text = data[0] + data[2];
+                    this.response.Text = data[0] + " - " + data[2];
                     verifiedAddress = true;
                 }
                 else
