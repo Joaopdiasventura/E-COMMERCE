@@ -48,11 +48,12 @@ namespace client_desktop
                     if (response.IsSuccessStatusCode)
                     {
                         string jsonResponse = await response.Content.ReadAsStringAsync();
-                        UserContext.UserInfo = jsonResponse;
+                        if (jsonResponse.StartsWith("{\"name\":"))
+                        {
+                            UserContext.UserInfo = jsonResponse;
 
-                        Console.WriteLine(UserContext.UserInfo);
-
-                        MessageBox.Show("Registro realizado com sucesso!");
+                            MessageBox.Show("Registro realizado com sucesso!");
+                        }
                     }
                     else
                     {

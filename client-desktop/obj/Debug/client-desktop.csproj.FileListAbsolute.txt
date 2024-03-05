@@ -12,3 +12,4 @@ C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\bin\Debug\Newtonsoft.Json.
 C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\obj\Debug\client_desktop.register.resources
 C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\obj\Debug\client-d.4E644302.Up2Date
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\obj\Debug\client_desktop.login.resources
