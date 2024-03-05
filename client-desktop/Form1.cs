@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace client_desktop
 {
@@ -15,6 +16,13 @@ namespace client_desktop
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            register nt = new register();
+            nt.Show();
+            this.Hide();
         }
     }
 }
