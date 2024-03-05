@@ -53,6 +53,10 @@ namespace client_desktop
                             UserContext.UserInfo = jsonResponse;
 
                             MessageBox.Show("Registro realizado com sucesso!");
+                            verifiedAddress = false;
+                            Form1 nt = new Form1();
+                            nt.Show();
+                            this.Hide();
                         }
                     }
                     else
@@ -91,12 +95,6 @@ namespace client_desktop
                 if (response.IsSuccessStatusCode)
                 {
                     string jsonResponse = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine(jsonResponse);
-                    if (jsonResponse.StartsWith("{\"message\":"))
-                    {
-                        MessageBox.Show("Cep não encontrado");
-                        return;
-                    }
 
                     string[] data = JsonConvert.DeserializeObject<string[]>(jsonResponse);
 

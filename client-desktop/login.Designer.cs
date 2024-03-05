@@ -88,6 +88,7 @@
             this.Controls.Add(this.password);
             this.Controls.Add(this.email);
             this.Name = "login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
             this.ResumeLayout(false);
             this.PerformLayout();
