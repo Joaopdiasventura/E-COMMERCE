@@ -1,0 +1,30 @@
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\bin\Debug\client-desktop.exe.config
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\bin\Debug\client-desktop.exe
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\bin\Debug\client-desktop.pdb
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\obj\Debug\client-desktop.csproj.AssemblyReference.cache
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\obj\Debug\client_desktop.Form1.resources
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\obj\Debug\client_desktop.Properties.Resources.resources
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\obj\Debug\client-desktop.csproj.GenerateResource.cache
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\obj\Debug\client-desktop.csproj.CoreCompileInputs.cache
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\obj\Debug\client-desktop.exe
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\obj\Debug\client-desktop.pdb
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\obj\Debug\client_desktop.register.resources
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\obj\Debug\client-d.4E644302.Up2Date
+C:\Users\Joao Paulo\Desktop\E-COMMERCE\client-desktop\obj\Debug\client_desktop.login.resources
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\bin\Debug\client-desktop.exe.config
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\bin\Debug\client-desktop.exe
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\bin\Debug\client-desktop.pdb
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\obj\Debug\client-desktop.csproj.AssemblyReference.cache
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\obj\Debug\client_desktop.Form1.resources
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\obj\Debug\client_desktop.login.resources
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\obj\Debug\client_desktop.Properties.Resources.resources
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\obj\Debug\client_desktop.register.resources
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\obj\Debug\client-desktop.csproj.GenerateResource.cache
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\obj\Debug\client-desktop.csproj.CoreCompileInputs.cache
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\obj\Debug\client-desktop.csproj.CopyComplete
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\obj\Debug\client-desktop.exe
+C:\Users\Alunos\Desktop\E-COMMERCE\client-desktop\obj\Debug\client-desktop.pdb
