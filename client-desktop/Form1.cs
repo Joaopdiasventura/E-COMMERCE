@@ -31,5 +31,12 @@ namespace client_desktop
             nt.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            home nt = new home();
+            nt.Show();
+            this.Hide();
+        }
     }
 }

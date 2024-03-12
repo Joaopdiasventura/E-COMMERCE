@@ -24,7 +24,7 @@ namespace client_desktop
                 MessageBox.Show("Verifique seu CEP antes de se registrar");
                 return;
             }
-            if (name.Text.Trim().Length == 7 && email.Text.Trim().Length == 7 && password.Text.Trim().Length == 0 && adress.Text.Trim().Length == 0 && numberAdress.Text.Trim().Length == 0)
+            if (name.Text.Trim().Length == 0 && email.Text.Trim().Length == 0 && password.Text.Trim().Length == 0 && adress.Text.Trim().Length == 0 && numberAdress.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Preeencha todos os campos", "Erro ao realizar o registro");
                 return;
@@ -54,7 +54,7 @@ namespace client_desktop
 
                             MessageBox.Show("Registro realizado com sucesso!");
                             verifiedAddress = false;
-                            Form1 nt = new Form1();
+                            home nt = new home();
                             nt.Show();
                             this.Hide();
                         }
@@ -90,11 +90,12 @@ namespace client_desktop
             {
                 HttpClient client = new HttpClient();
 
-                HttpResponseMessage response = await client.GetAsync($"http://localhost:3000/adress/find/{cep}");
+                HttpResponseMessage response = await client.GetAsync($"http://localhost:10000/find/{cep}");
 
                 if (response.IsSuccessStatusCode)
                 {
                     string jsonResponse = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine(jsonResponse);
 
                     string[] data = JsonConvert.DeserializeObject<string[]>(jsonResponse);
 

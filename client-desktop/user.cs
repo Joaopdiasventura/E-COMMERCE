@@ -8,11 +8,11 @@ namespace client_desktop
 {
     internal class user
     {
-        private string name;
-        private string email;
-        private string password;
-        private string adress;
-        private float money;
+        public string name;
+        public string email;
+        public string password;
+        public string adress;
+        public float money;
     }
 }
 public static class UserContext

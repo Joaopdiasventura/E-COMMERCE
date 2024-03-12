@@ -49,6 +49,9 @@ namespace client_desktop
                             UserContext.UserInfo = jsonResponse;
 
                             MessageBox.Show("Login realizado com sucesso!");
+                            home nt = new home();
+                            nt.Show();
+                            this.Hide();
                         }
                     }
                     else
