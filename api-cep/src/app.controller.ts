@@ -16,7 +16,8 @@ export class AppController {
           message: "Cep não encontrado"
         }
       }
-  
+      console.log(result);
+      
       return result;
     } catch (error) {
       console.log(error);

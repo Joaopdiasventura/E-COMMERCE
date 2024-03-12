@@ -7,6 +7,7 @@ export class AppService {
   async findCep(param) {
     let browser;
     const { cep } = param;
+    console.log(cep);    
 
     try {
       browser = await puppeteer.launch();
