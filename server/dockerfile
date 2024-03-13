@@ -4,8 +4,6 @@ RUN npm i -g @nestjs/cli
 
 COPY package*.json ./
 
-RUN npm install - g yarn
-
 COPY . .
 
 RUN npm run build
