@@ -20,7 +20,7 @@ export class UserController {
 	@Post("register")
 	async register(
 		@Body() createUserDto: CreateUserDto,
-		@Res() res: FastifyReply,
+		@Res() res: FastifyReply
 	) {
 		createUserDto.password = bcrypt.hashSync(createUserDto.password, 10);
 		const result = await this.userService.register(createUserDto);
