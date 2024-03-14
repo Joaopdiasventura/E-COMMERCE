@@ -26,8 +26,11 @@ export class PurchaseService {
 					where: { id: createPurchaseDto.products[i].fk_product_id },
 				});
 
-				if (!product)
+				if (!product){
+          await this.prisma.purchase_product.deleteMany({where: {fk_purchase_id: purchase.id}});
+          await this.prisma.purchase.delete({where: {id: purchase.id}});
 					return "Produto não encontrado.... COMPRA CANCELADA";
+        }
 
 				createPurchaseDto.products[i].fk_purchase_id = purchase.id;
 
