@@ -9,12 +9,12 @@ import { User } from "./entities/user.entity";
 export class UserService {
 	constructor(private readonly prisma: PrismaService) {}
 
-	async findUser (email: string): Promise<User | void> {
+	async findUser(email: string): Promise<User | void> {
 		const user = await this.prisma.user.findUnique({
 			where: { email: email },
 		});
 
-		if (user) return user
+		if (user) return user;
 	}
 
 	async register(Dto: CreateUserDto): Promise<User | string> {
@@ -31,17 +31,17 @@ export class UserService {
 		const user = await this.findUser(Dto.email);
 
 		if (!user) return "Usuário não encontrado";
-    
+
 		if (bcrypt.compare(user.password, Dto.password)) return user;
 
 		return "Senha incorreta";
 	}
 
-	async remove(email: string): Promise<string> {
+	async remove(email: string): Promise<User | string> {
 		const user = await this.findUser(email);
 		if (!user) return "Usuário não encontrado";
 
-    	await this.prisma.user.delete({where: {email}});
-    	return "Usuário deletado"
+		await this.prisma.user.delete({ where: { email } });
+		return user;
 	}
 }

@@ -11,16 +11,16 @@ export class AdressService {
 			)
 			.then((result) => result.data);
 
-            const components = result.results[0].address_components;
-            
+		const components = result.results[0].address_components;
+
 		if (result.status == "OK") {
-            return {
-                street: components[1].long_name,
-                neighborhood: components[2].long_name,
-                city: components[3].long_name,
-                state: components[4].long_name,
-                county: components[5].long_name
-            }
+			return {
+				street: components[1].long_name,
+				neighborhood: components[2].long_name,
+				city: components[3].long_name,
+				state: components[4].long_name,
+				county: components[5].long_name,
+			};
 		}
 	}
 }

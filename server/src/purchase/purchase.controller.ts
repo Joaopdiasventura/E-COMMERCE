@@ -1,34 +1,40 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { PurchaseService } from './purchase.service';
-import { CreatePurchaseDto } from './dto/create-purchase.dto';
-import { UpdatePurchaseDto } from './dto/update-purchase.dto';
+import {
+	Controller,
+	Get,
+	Post,
+	Body,
+	Param,
+	HttpStatus,
+	Res,
+} from "@nestjs/common";
+import { PurchaseService } from "./purchase.service";
+import { CreatePurchaseDto } from "./dto/create-purchase.dto";
+import { FastifyReply } from "fastify";
 
-@Controller('purchase')
+@Controller("purchase")
 export class PurchaseController {
-  constructor(private readonly purchaseService: PurchaseService) {}
+	constructor(private readonly purchaseService: PurchaseService) {}
 
-  @Post()
-  create(@Body() createPurchaseDto: CreatePurchaseDto) {
-    return this.purchaseService.create(createPurchaseDto);
-  }
+	@Post()
+	async create(
+		@Body() createPurchaseDto: CreatePurchaseDto,
+		@Res() res: FastifyReply,
+	) {
+		const result = await this.purchaseService.create(createPurchaseDto);
 
-  @Get()
-  findAll() {
-    return this.purchaseService.findAll();
-  }
+		if (typeof result == "string")
+			return res.status(HttpStatus.BAD_REQUEST).send({ msg: result });
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.purchaseService.findOne(+id);
-  }
+		return res.status(HttpStatus.OK).send(result);
+	}
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updatePurchaseDto: UpdatePurchaseDto) {
-    return this.purchaseService.update(+id, updatePurchaseDto);
-  }
+	@Get()
+	findAll() {
+		return this.purchaseService.findAll();
+	}
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.purchaseService.remove(+id);
-  }
+	@Get(":id")
+	findOne(@Param("id") id: string) {
+		return this.purchaseService.findOne(+id);
+	}
 }

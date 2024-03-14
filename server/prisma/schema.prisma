@@ -12,7 +12,8 @@ model User {
   email    String     @id @db.VarChar(50)
   password String     @db.VarChar(100)
   adress   String     @db.VarChar(13)
-  money    Float      @default(100.0)
+  money    Float      @default(1000.0)
+  isAdm    Boolean    @default(false)
   purchase Purchase[]
   product  Product[]
 }
@@ -30,7 +31,7 @@ model Product {
 
 model Purchase {
   id               Int                @id @default(autoincrement())
-  value            Float
+  value            Float              @default(0.0)
   fk_user_email    String             @db.VarChar(50)
   User             User?              @relation(fields: [fk_user_email], references: [email])
   Purchase_product Purchase_product[]
