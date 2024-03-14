@@ -11,9 +11,8 @@ export class AdressService {
 			)
 			.then((result) => result.data);
 
-		const components = result.results[0].address_components;
-
 		if (result.status == "OK") {
+			const components = result.results[0].address_components;
 			return {
 				street: components[1].long_name,
 				neighborhood: components[2].long_name,
