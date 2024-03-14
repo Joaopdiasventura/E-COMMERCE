@@ -15,12 +15,13 @@ import { CreateProductDto } from "./dto/create-product.dto";
 export class ProductController {
 	constructor(private readonly productService: ProductService) {}
 
-	@Post()
+	@Post(":qnt")
 	async create(
 		@Body() createProductDto: CreateProductDto,
 		@Res() res: FastifyReply,
+		@Param("qnt") qnt: string 
 	) {
-		const result = await this.productService.create(createProductDto);
+		const result = await this.productService.create(createProductDto, qnt);
 
 		if (typeof result == "string")
 			return res.status(HttpStatus.BAD_REQUEST).send({ msg: result });

@@ -26,24 +26,24 @@ export class PurchaseService {
 					where: { id: createPurchaseDto.products[i].fk_product_id },
 				});
 
-				if (!product){
-          await this.prisma.purchase_product.deleteMany({where: {fk_purchase_id: purchase.id}});
-          await this.prisma.purchase.delete({where: {id: purchase.id}});
+				if (!product || product.fk_purchase_id != null) {
+					await this.prisma.product.updateMany({
+						where: { fk_purchase_id: purchase.id },
+						data: { fk_purchase_id: purchase.id },
+					});
+					await this.prisma.purchase.delete({
+						where: { id: purchase.id },
+					});
 					return "Produto não encontrado.... COMPRA CANCELADA";
-        }
-
-				createPurchaseDto.products[i].fk_purchase_id = purchase.id;
-
-				await this.prisma.purchase_product.create({
-					data: { ...createPurchaseDto.products[i] },
-				});
+				}
 
 				await this.prisma.product.update({
 					where: { id: product.id },
-					data: { quantity: (product.quantity -= 1) },
+					data: { fk_purchase_id: purchase.id },
 				});
-				console.log(product.quantity);
 
+				value += product.price;
+				
 				const seller = await this.prisma.user.findUnique({
 					where: { email: product.fk_user_email },
 				});
@@ -53,13 +53,13 @@ export class PurchaseService {
 					where: { email: product.fk_user_email },
 					data: { money: (seller.money += product.price) },
 				});
+
 				products.push(product);
 			}
 
-			purchase.value = value;
 			await this.prisma.purchase.update({
 				where: { id: purchase.id },
-				data: { value },
+				data: { value: value },
 			});
 
 			await this.prisma.user.update({

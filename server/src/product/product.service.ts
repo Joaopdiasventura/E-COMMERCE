@@ -7,7 +7,7 @@ import { UserService } from "src/user/user.service";
 @Injectable()
 export class ProductService {
 	constructor(private readonly prisma: PrismaService) {}
-	async create(createProductDto: CreateProductDto) {
+	async create(createProductDto: CreateProductDto, quantity: string) {
 		const user = await this.prisma.user.findUnique({
 			where: { email: createProductDto.fk_user_email },
 		});
@@ -27,16 +27,18 @@ export class ProductService {
 		if (typeof createProductDto.price == "string") {
 			createProductDto.price = parseFloat(createProductDto.price);
 		}
-		if (typeof createProductDto.quantity == "string") {
-			createProductDto.quantity = parseInt(createProductDto.quantity);
+
+		createProductDto.fk_user_email;
+		const products = [];
+
+		for (let i = 0; i < parseInt(quantity); i++) {
+			const product = await this.prisma.product.create({
+				data: { ...createProductDto, fk_purchase_id: null },
+			});
+			products.push(product);
 		}
 
-		const product = await this.prisma.product.create({
-			data: { ...createProductDto },
-		});
-		console.log(product);
-
-		return product;
+		return products;
 	}
 
 	async findAll(): Promise<Product[]> {

@@ -4,14 +4,11 @@ export class CreateProductDto {
 	@IsNotEmpty({ message: "Campo 'name' não pode ficar vazio" })
 	name: string;
 
-	@IsNotEmpty()
+	@IsNotEmpty({ message: "Campo 'price' não pode ficar vazio" })
 	price: number;
 
-	@IsNotEmpty()
+	@IsNotEmpty({ message: "Campo 'description' não pode ficar vazio" })
 	description: string;
-
-	@IsNotEmpty()
-	quantity: number;
 
 	@IsNotEmpty({ message: "Campo 'fk_user_email' não pode ficar vazio" })
 	fk_user_email: string;

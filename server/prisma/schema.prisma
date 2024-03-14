@@ -14,33 +14,25 @@ model User {
   adress   String     @db.VarChar(13)
   money    Float      @default(1000.0)
   isAdm    Boolean    @default(false)
-  purchase Purchase[]
-  product  Product[]
+  Purchase Purchase[]
+  Product  Product[]
 }
 
 model Product {
-  id               Int                @id @default(autoincrement())
-  name             String             @db.VarChar(20)
-  price            Float
-  description      String             @db.VarChar(75)
-  quantity         Int
-  fk_user_email    String             @db.VarChar(50)
-  User             User?              @relation(fields: [fk_user_email], references: [email])
-  Purchase_product Purchase_product[]
+  id             Int       @id @default(autoincrement())
+  name           String    @db.VarChar(20)
+  price          Float
+  description    String    @db.VarChar(75)
+  fk_user_email  String    @db.VarChar(50)
+  fk_purchase_id Int?
+  User           User?     @relation(fields: [fk_user_email], references: [email])
+  Purchase       Purchase? @relation(fields: [fk_purchase_id], references: [id])
 }
 
 model Purchase {
-  id               Int                @id @default(autoincrement())
-  value            Float              @default(0.0)
-  fk_user_email    String             @db.VarChar(50)
-  User             User?              @relation(fields: [fk_user_email], references: [email])
-  Purchase_product Purchase_product[]
-}
-
-model Purchase_product {
-  id             Int       @id @default(autoincrement())
-  fk_product_id  Int
-  fk_purchase_id Int
-  Product        Product?  @relation(fields: [fk_product_id], references: [id])
-  Purchase       Purchase? @relation(fields: [fk_purchase_id], references: [id])
+  id            Int       @id @default(autoincrement())
+  value         Float     @default(0.0)
+  fk_user_email String    @db.VarChar(50)
+  User          User?     @relation(fields: [fk_user_email], references: [email])
+  Product       Product[]
 }
