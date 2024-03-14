@@ -2,7 +2,8 @@ import { Injectable } from "@nestjs/common";
 import { CreatePurchaseDto } from "./dto/create-purchase.dto";
 import { PrismaService } from "src/database/prisma.service";
 import { Product } from "src/product/entities/product.entity";
-import purchaseResponse from "./entities/purchaseResponse";
+import createPurchaseResponse from "./entities/createPurchaseResponse";
+import { getPurchaseResponse } from "./entities/getPurchaseResponse";
 
 @Injectable()
 export class PurchaseService {
@@ -12,12 +13,13 @@ export class PurchaseService {
 			const user = await this.prisma.user.findUnique({
 				where: { email: createPurchaseDto.fk_user_email },
 			});
-
+			
 			if (!user) return "Usuário não encontrado";
 
 			const purchase = await this.prisma.purchase.create({
 				data: { fk_user_email: user.email },
 			});
+
 			let value = 0;
 			const products: Product[] = [];
 
@@ -57,6 +59,11 @@ export class PurchaseService {
 				products.push(product);
 			}
 
+			if (products.length == 0) {
+				await this.prisma.purchase.delete({where: {id: purchase.id}});
+				return "Compra cancelada por não possuir nenhum item";
+			}
+
 			await this.prisma.purchase.update({
 				where: { id: purchase.id },
 				data: { value: value },
@@ -67,12 +74,25 @@ export class PurchaseService {
 				data: { money: (user.money -= value) },
 			});
 
-			return new purchaseResponse(purchase.id, products);
-		} catch (error) {}
+			return new createPurchaseResponse(purchase.id, value, products);
+		} catch (error) {
+			console.log(error);
+			
+		}
 	}
 
-	findAll() {
-		return `This action returns all purchase`;
+	async findAll(email: string) {
+		const user = await this.prisma.user.findUnique({where: {email}});
+
+		if (!user) return "Usuário não encontrado";
+		const purchase = await this.prisma.purchase.findMany({where: {fk_user_email: user.email}, orderBy: {id: "desc"}});
+
+		const result = [];
+		for (let i = 0; i < purchase.length; i++) {
+			const products = await this.prisma.product.findMany({where: {fk_purchase_id: purchase[i].id}, orderBy: {id: "desc"}});
+			result.push(new getPurchaseResponse(purchase[i], products));
+		}
+		return result;
 	}
 
 	findOne(id: number) {

@@ -45,8 +45,20 @@ export class ProductService {
 		return await this.prisma.product.findMany({ orderBy: { id: "desc" } });
 	}
 
-	findOne(id: number) {
-		return `This action returns a #${id} product`;
+	async findOne(email: string) {
+		try {
+
+			const user = await this.prisma.user.findUnique({where: {email}});
+
+			if (!user) return "Usuário não encontrado"
+
+			const products = await this.prisma.product.findMany({where: {fk_user_email: user.email}});
+
+			return products;
+			
+		} catch (error) {
+			console.log(error);
+		}
 	}
 
 	remove(id: number) {

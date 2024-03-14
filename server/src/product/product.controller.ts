@@ -19,14 +19,14 @@ export class ProductController {
 	async create(
 		@Body() createProductDto: CreateProductDto,
 		@Res() res: FastifyReply,
-		@Param("qnt") qnt: string 
+		@Param("qnt") qnt: string,
 	) {
 		const result = await this.productService.create(createProductDto, qnt);
 
 		if (typeof result == "string")
 			return res.status(HttpStatus.BAD_REQUEST).send({ msg: result });
 
-		return res.status(201).send(result);
+		return res.status(HttpStatus.CREATED).send(result);
 	}
 
 	@Get()
@@ -34,8 +34,12 @@ export class ProductController {
 		return this.productService.findAll();
 	}
 
-	@Get(":id")
-	findOne(@Param("id") id: string) {
-		return this.productService.findOne(+id);
+	@Get(":email")
+	async findOne(@Param("email") email: string, @Res() res: FastifyReply) {
+		const result = await this.productService.findOne(email);
+		if (typeof result == "string")
+			return res.status(HttpStatus.BAD_REQUEST).send({ msg: result });
+
+		return res.status(HttpStatus.OK).send(result);
 	}
 }

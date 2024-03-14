@@ -28,9 +28,14 @@ export class PurchaseController {
 		return res.status(HttpStatus.OK).send(result);
 	}
 
-	@Get()
-	findAll() {
-		return this.purchaseService.findAll();
+	@Get("/user/:email")
+	async findAll(@Param("email") email: string, @Res() res: FastifyReply) {
+		const result = await this.purchaseService.findAll(email);
+
+		if (typeof result == "string")
+			return res.status(HttpStatus.BAD_REQUEST).send({ msg: result });
+
+		return res.status(HttpStatus.OK).send(result);
 	}
 
 	@Get(":id")

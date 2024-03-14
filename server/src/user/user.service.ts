@@ -39,6 +39,8 @@ export class UserService {
 
 	async remove(email: string): Promise<User | string> {
 		const user = await this.findUser(email);
+		console.log(user);
+		
 		if (!user) return "Usuário não encontrado";
 
 		await this.prisma.user.delete({ where: { email } });
