@@ -3,52 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\pages\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|solutionrelative:pages\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\pages\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|solutionrelative:pages\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\addprod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|solutionrelative:addprod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\user\\requests\\userget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|solutionrelative:user\\requests\\userget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|solutionrelative:home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\user\\requests\\userpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|solutionrelative:user\\requests\\userpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|solutionrelative:home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|solutionrelative:product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\pages\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|solutionrelative:pages\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|solutionrelative:user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\user\\dto\u0027s\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|solutionrelative:user\\dto\u0027s\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\user\\dto\u0027s\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|solutionrelative:user\\dto\u0027s\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\addprod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|solutionrelative:addprod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\pages\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|solutionrelative:pages\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\pages\\createpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|solutionrelative:pages\\createpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89C677C0-B305-4A80-B76E-5B3439D62638}|client-desktop.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\user\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|solutionrelative:user\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|c:\\users\\joao paulo\\desktop\\projetos\\e-commerce\\client-desktop\\pages\\createproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{34D6BADC-A5DB-4F82-9C90-EB0952E7F8A0}|client-desktop.csproj|solutionrelative:pages\\createproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,157 +62,170 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "addProd.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\addProd.cs",
-              "RelativeDocumentMoniker": "addProd.cs",
-              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\addProd.cs [Design]",
-              "RelativeToolTip": "addProd.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Pages\\Login.cs",
+              "RelativeDocumentMoniker": "Pages\\Login.cs",
+              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Pages\\Login.cs",
+              "RelativeToolTip": "Pages\\Login.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAUwDIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T00:53:25.533Z",
+              "WhenOpened": "2024-03-15T00:14:52.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "loginUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\User\\Dto\u0027s\\loginUserDto.cs",
+              "RelativeDocumentMoniker": "User\\Dto\u0027s\\loginUserDto.cs",
+              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\User\\Dto\u0027s\\loginUserDto.cs",
+              "RelativeToolTip": "User\\Dto\u0027s\\loginUserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T00:10:55.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "createUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\User\\Dto\u0027s\\createUserDto.cs",
+              "RelativeDocumentMoniker": "User\\Dto\u0027s\\createUserDto.cs",
+              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\User\\Dto\u0027s\\createUserDto.cs",
+              "RelativeToolTip": "User\\Dto\u0027s\\createUserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T20:31:39.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "userGET.cs",
+              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\User\\Requests\\userGET.cs",
+              "RelativeDocumentMoniker": "User\\Requests\\userGET.cs",
+              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\User\\Requests\\userGET.cs",
+              "RelativeToolTip": "User\\Requests\\userGET.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T20:18:49.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "userPOST.cs",
+              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\User\\Requests\\userPOST.cs",
+              "RelativeDocumentMoniker": "User\\Requests\\userPOST.cs",
+              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\User\\Requests\\userPOST.cs",
+              "RelativeToolTip": "User\\Requests\\userPOST.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAswCsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T20:18:41.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\User\\Entities\\UserEntity.cs",
+              "RelativeDocumentMoniker": "User\\Entities\\UserEntity.cs",
+              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\User\\Entities\\UserEntity.cs",
+              "RelativeToolTip": "User\\Entities\\UserEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T20:16:25.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Register.cs",
+              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Pages\\Register.cs",
+              "RelativeDocumentMoniker": "Pages\\Register.cs",
+              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Pages\\Register.cs",
+              "RelativeToolTip": "Pages\\Register.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAgwD4AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T19:25:40.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CreateProduct.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Pages\\CreateProduct.cs",
+              "RelativeDocumentMoniker": "Pages\\CreateProduct.cs",
+              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Pages\\CreateProduct.cs [Design]",
+              "RelativeToolTip": "Pages\\CreateProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T19:16:55.352Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "CreatePurchase.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Pages\\CreatePurchase.cs",
+              "RelativeDocumentMoniker": "Pages\\CreatePurchase.cs",
+              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Pages\\CreatePurchase.cs [Design]",
+              "RelativeToolTip": "Pages\\CreatePurchase.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T19:16:34.662Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Register.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Pages\\Register.cs",
+              "RelativeDocumentMoniker": "Pages\\Register.cs",
+              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Pages\\Register.cs [Design]",
+              "RelativeToolTip": "Pages\\Register.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T19:16:19.821Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Pages\\Login.cs",
+              "RelativeDocumentMoniker": "Pages\\Login.cs",
+              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Pages\\Login.cs [Design]",
+              "RelativeToolTip": "Pages\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T19:16:02.474Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAUwDUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T19:12:47.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T22:10:31.153Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAlwCMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T22:14:12.932Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "login.cs",
-              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\login.cs",
-              "RelativeDocumentMoniker": "login.cs",
-              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\login.cs",
-              "RelativeToolTip": "login.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T01:50:43.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "register.cs",
-              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\register.cs",
-              "RelativeDocumentMoniker": "register.cs",
-              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\register.cs",
-              "RelativeToolTip": "register.cs",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAtwGUAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T22:25:38.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "addProd.cs",
-              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\addProd.cs",
-              "RelativeDocumentMoniker": "addProd.cs",
-              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\addProd.cs",
-              "RelativeToolTip": "addProd.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwCkAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T00:58:01.815Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "home.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\home.cs",
-              "RelativeDocumentMoniker": "home.cs",
-              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\home.cs [Design]",
-              "RelativeToolTip": "home.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T23:36:00.196Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "user.cs",
-              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\user.cs",
-              "RelativeDocumentMoniker": "user.cs",
-              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\user.cs",
-              "RelativeToolTip": "user.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T00:05:49.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "register.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\register.cs",
-              "RelativeDocumentMoniker": "register.cs",
-              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\register.cs [Design]",
-              "RelativeToolTip": "register.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T22:21:17.474Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "home.cs",
-              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\home.cs",
-              "RelativeDocumentMoniker": "home.cs",
-              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\home.cs",
-              "RelativeToolTip": "home.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAawBcAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T23:39:03.984Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Product.cs",
-              "RelativeDocumentMoniker": "Product.cs",
-              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\Product.cs",
-              "RelativeToolTip": "Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T23:45:36.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\login.cs",
-              "RelativeDocumentMoniker": "login.cs",
-              "ToolTip": "C:\\Users\\Joao Paulo\\Desktop\\PROJETOS\\E-COMMERCE\\client-desktop\\login.cs [Design]",
-              "RelativeToolTip": "login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T01:49:35.227Z",
+              "WhenOpened": "2024-03-14T19:12:40.95Z",
               "EditorCaption": " [Design]"
             }
           ]

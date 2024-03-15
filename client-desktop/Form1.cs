@@ -1,42 +1,55 @@
-﻿using System;
+﻿using client_desktop.Pages;
+using client_desktop.User.Entities;
+using client_desktop.User.Requests;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 
 namespace client_desktop
 {
-    public partial class Form1 : Form
+    public partial class HOME : Form
     {
-        public Form1()
+        public HOME()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            register nt = new register();
-            nt.Show();
-            this.Hide();
+            Login nw = new Login();
+            nw.Show();
+            Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            login nt = new login();
-            nt.Show();
-            this.Hide();
+            Register nw = new Register();
+            nw.Show();
+            Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void HOME_Load(object sender, EventArgs e)
         {
-            home nt = new home();
-            nt.Show();
-            this.Hide();
+            if (File.Exists("user.json"))
+            {
+                string savedJson = File.ReadAllText("user.json");
+                UserEntity savedUser = JsonConvert.DeserializeObject<UserEntity>(savedJson);
+
+                UserStatic.email = savedUser.email;
+                UserStatic.name = savedUser.name;
+                UserStatic.password = savedUser.password;
+                UserStatic.adress = savedUser.adress;
+                UserStatic.money = savedUser.money;
+                label1.Text = UserStatic.name + " " + UserStatic.email;
+            }
         }
     }
 }
