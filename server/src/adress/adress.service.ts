@@ -18,7 +18,7 @@ export class AdressService {
 				neighborhood: components[2].long_name,
 				city: components[3].long_name,
 				state: components[4].long_name,
-				county: components[5].long_name,
+				country: components[5].long_name,
 			};
 		}
 		return "CEP INVÁLIDO"
