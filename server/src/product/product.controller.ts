@@ -34,9 +34,18 @@ export class ProductController {
 		return this.productService.findAll();
 	}
 
-	@Get(":email")
-	async findOne(@Param("email") email: string, @Res() res: FastifyReply) {
-		const result = await this.productService.findOne(email);
+	@Get("/seller/:email")
+	async findBySeller(@Param("email") email: string, @Res() res: FastifyReply) {
+		const result = await this.productService.findBySeller(email);
+		if (typeof result == "string")
+			return res.status(HttpStatus.BAD_REQUEST).send({ msg: result });
+
+		return res.status(HttpStatus.OK).send(result);
+	}
+
+	@Get("/id/:id")
+	async findOne(@Param("id") id: number, @Res() res: FastifyReply){
+		const result = await this.productService.findOne(id);
 		if (typeof result == "string")
 			return res.status(HttpStatus.BAD_REQUEST).send({ msg: result });
 

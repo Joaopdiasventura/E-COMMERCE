@@ -45,7 +45,7 @@ export class ProductService {
 		return await this.prisma.product.findMany({ orderBy: { id: "desc" } });
 	}
 
-	async findOne(email: string) {
+	async findBySeller(email: string): Promise<Product[] | string> {
 		try {
 
 			const user = await this.prisma.user.findUnique({where: {email}});
@@ -56,6 +56,18 @@ export class ProductService {
 
 			return products;
 			
+		} catch (error) {
+			console.log(error);
+		}
+	}
+
+	async findOne(id:number): Promise<Product | string> {
+		try {
+			const product = await this.prisma.product.findUnique({where: {id}});
+
+			if(!product) return "Produto não encontrado";
+
+			return product
 		} catch (error) {
 			console.log(error);
 		}
