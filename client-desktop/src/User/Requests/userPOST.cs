@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
 using client_desktop.Models;
+using client_desktop.src.User.Entities;
 using client_desktop.User.Dto_s;
-using client_desktop.User.Entities;
 using Newtonsoft.Json;
 
 namespace client_desktop.user.Requests
@@ -31,7 +27,7 @@ namespace client_desktop.user.Requests
 
                 if (response.IsSuccessStatusCode)
                 {
-                    UserEntity data = JsonConvert.DeserializeObject<UserEntity>(jsonResponse);
+                    TokenEntity data = JsonConvert.DeserializeObject<TokenEntity>(jsonResponse);
                     return data;
                 }
                 else
@@ -62,7 +58,7 @@ namespace client_desktop.user.Requests
 
                 if (response.IsSuccessStatusCode)
                 {
-                    UserEntity data = JsonConvert.DeserializeObject<UserEntity>(jsonResponse);
+                    TokenEntity data = JsonConvert.DeserializeObject<TokenEntity>(jsonResponse);
                     return data;
                 }
                 else

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace client_desktop.Product.Requests
+namespace client_desktop.Product.Entities
 {
-    internal class Produto
+    public class ProductEntity
     {
         public int id;
         public string name;

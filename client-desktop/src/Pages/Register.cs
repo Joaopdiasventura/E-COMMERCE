@@ -1,4 +1,5 @@
 ﻿using client_desktop.Models;
+using client_desktop.src.User.Entities;
 using client_desktop.user.Requests;
 using client_desktop.User.Entities;
 using client_desktop.User.Requests;
@@ -53,7 +54,7 @@ namespace client_desktop.Pages
             userPOST request = new userPOST();
             Task<object> task = request.Register(emailInput.Text, nameInput.Text, passwordInput.Text, (cep + numberInput.Text));
             object result = await task;
-            if (result is UserEntity user)
+            if (result is TokenEntity user)
             {
                 string filePath = "user.json";
                 string json = JsonConvert.SerializeObject(user);

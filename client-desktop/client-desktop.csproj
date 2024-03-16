@@ -49,65 +49,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="src\Pages\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="src\Pages\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Msg.cs" />
-    <Compile Include="Pages\CreateProduct.cs">
+    <Compile Include="src\Models\Msg.cs" />
+    <Compile Include="src\Pages\CreateProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\CreateProduct.Designer.cs">
+    <Compile Include="src\Pages\CreateProduct.Designer.cs">
       <DependentUpon>CreateProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CreatePurchase.cs">
+    <Compile Include="src\Pages\CreatePurchase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\CreatePurchase.Designer.cs">
+    <Compile Include="src\Pages\CreatePurchase.Designer.cs">
       <DependentUpon>CreatePurchase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Login.cs">
+    <Compile Include="src\Pages\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\Login.Designer.cs">
+    <Compile Include="src\Pages\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Register.cs">
+    <Compile Include="src\Pages\Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\Register.Designer.cs">
+    <Compile Include="src\Pages\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product\Entities\Produto.cs" />
-    <Compile Include="Product\Requests\productGET.cs" />
-    <Compile Include="Product\Requests\productPOST.cs" />
+    <Compile Include="src\Product\Entities\ProductEntity.cs" />
+    <Compile Include="src\Product\Requests\productGET.cs" />
+    <Compile Include="src\Product\Requests\productPOST.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Purchase\Entities\getPurchase.cs" />
-    <Compile Include="Purchase\Entities\Purchase.cs" />
-    <Compile Include="Purchase\Requests\purchaseGET.cs" />
-    <Compile Include="Purchase\Requests\purchasePOST.cs" />
-    <Compile Include="User\Dto%27s\createUserDto.cs" />
-    <Compile Include="User\Dto%27s\loginUserDto.cs" />
-    <Compile Include="User\Entities\Adress.cs" />
-    <Compile Include="User\Entities\UserEntity.cs" />
-    <Compile Include="User\Requests\userGET.cs" />
-    <Compile Include="User\Requests\userPOST.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="src\Purchase\Entities\getPurchase.cs" />
+    <Compile Include="src\Purchase\Entities\Purchase.cs" />
+    <Compile Include="src\Purchase\Requests\purchaseGET.cs" />
+    <Compile Include="src\Purchase\Requests\purchasePOST.cs" />
+    <Compile Include="src\User\Dto%27s\createUserDto.cs" />
+    <Compile Include="src\User\Dto%27s\loginUserDto.cs" />
+    <Compile Include="src\User\Entities\Adress.cs" />
+    <Compile Include="src\User\Entities\TokenEntity.cs" />
+    <Compile Include="src\User\Entities\UserEntity.cs" />
+    <Compile Include="src\User\Requests\userGET.cs" />
+    <Compile Include="src\User\Requests\userPOST.cs" />
+    <EmbeddedResource Include="src\Pages\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\CreateProduct.resx">
+    <EmbeddedResource Include="src\Pages\CreateProduct.resx">
       <DependentUpon>CreateProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\CreatePurchase.resx">
+    <EmbeddedResource Include="src\Pages\CreatePurchase.resx">
       <DependentUpon>CreatePurchase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Login.resx">
+    <EmbeddedResource Include="src\Pages\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Register.resx">
+    <EmbeddedResource Include="src\Pages\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -134,8 +135,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Product\Dto%27s\" />
-    <Folder Include="Purchase\Dto%27s\" />
+    <Folder Include="src\Product\Dto%27s\" />
+    <Folder Include="src\Purchase\Dto%27s\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

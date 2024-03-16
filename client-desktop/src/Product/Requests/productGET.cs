@@ -1,16 +1,19 @@
-﻿using client_desktop.User.Entities;
-using client_desktop.Models;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using client_desktop.Models;
+using client_desktop.Product.Entities;
+using client_desktop.User.Entities;
 using Newtonsoft.Json;
 
-namespace client_desktop.User.Requests
+namespace client_desktop.Product.Requests
 {
-    internal class userGET
+    internal class productGET
     {
-        public async Task<object> FindAdress(string cep)
+        public async Task<object> GetProducts(string cep)
         {
             HttpClient client = new HttpClient();
             string url = $"https://e-commerce-r4j0.onrender.com/adress/findAdress/{cep}";
@@ -22,7 +25,7 @@ namespace client_desktop.User.Requests
 
                 if (response.IsSuccessStatusCode)
                 {
-                    Adress data = JsonConvert.DeserializeObject<Adress>(jsonResponse);
+                    ProductEntity[] data = JsonConvert.DeserializeObject<ProductEntity[]>(jsonResponse);
                     return data;
                 }
                 else
