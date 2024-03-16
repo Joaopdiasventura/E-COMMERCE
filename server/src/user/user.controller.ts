@@ -7,6 +7,7 @@ import {
 	Delete,
 	Res,
 	HttpStatus,
+	Get,
 } from "@nestjs/common";
 import { FastifyReply } from "fastify";
 import { UserService } from "./user.service";
@@ -44,6 +45,16 @@ export class UserController {
 	@Delete(":email")
 	async remove(@Param("email") email: string, @Res() res: FastifyReply) {
 		const result = await this.userService.remove(email);
+
+		if (typeof result == "string")
+			return res.status(HttpStatus.BAD_REQUEST).send({ msg: result });
+
+		return res.status(HttpStatus.OK).send(result);
+	}
+
+	@Get("/decode/:email")
+	async decode (@Param("email") email: string, @Res() res: FastifyReply){
+		const result = await this.userService.decode(email);
 
 		if (typeof result == "string")
 			return res.status(HttpStatus.BAD_REQUEST).send({ msg: result });
