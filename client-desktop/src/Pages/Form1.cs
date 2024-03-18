@@ -73,5 +73,12 @@ namespace client_desktop
         {
             Console.WriteLine("Hello World");
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CreateProduct nw = new CreateProduct();
+            nw.Show();
+            Hide();
+        }
     }
 }
