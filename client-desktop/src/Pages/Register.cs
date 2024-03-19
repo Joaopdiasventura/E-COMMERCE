@@ -68,5 +68,12 @@ namespace client_desktop.Pages
             string msg = message.msg;
             MessageBox.Show(msg, "ERRO AO VERIFICAR SE REGISTRAR");
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            HOME nw = new HOME();
+            nw.Show();
+            Hide();
+        }
     }
 }

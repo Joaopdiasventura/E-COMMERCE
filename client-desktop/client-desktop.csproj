@@ -81,6 +81,7 @@
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Product\Entities\ProductEntity.cs" />
+    <Compile Include="src\Product\Entities\ShoppingCart.cs" />
     <Compile Include="src\Product\Requests\productGET.cs" />
     <Compile Include="src\Product\Requests\productPOST.cs" />
     <Compile Include="Program.cs" />

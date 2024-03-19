@@ -13,5 +13,6 @@ namespace client_desktop.Product.Entities
         public string description;
         public float price;
         public string fk_user_email;
+        public string fk_purchase_id;
     }
 }

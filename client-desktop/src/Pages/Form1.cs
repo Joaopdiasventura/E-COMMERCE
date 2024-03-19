@@ -1,25 +1,26 @@
 ﻿using client_desktop.Models;
 using client_desktop.Pages;
+using client_desktop.Product.Entities;
+using client_desktop.Product.Requests;
+using client_desktop.src.Product.Entities;
 using client_desktop.src.User.Entities;
-using client_desktop.user.Requests;
 using client_desktop.User.Entities;
 using client_desktop.User.Requests;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace client_desktop
 {
     public partial class HOME : Form
+
     {
+        public static ProductEntity[] products;
+        public static List<int> ids = new List<int>();
+
         public HOME()
         {
             InitializeComponent();
@@ -39,7 +40,66 @@ namespace client_desktop
             Hide();
         }
 
-         private async void HOME_Load(object sender, EventArgs e)
+         private void HOME_Load(object sender, EventArgs e)
+        {
+                dataGridView1.ClearSelection();
+            GetProducts();
+            GetUser();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedCells.Count > 0)
+            {
+                int rowIndex = dataGridView1.SelectedCells[0].RowIndex;
+                object idCellValue = dataGridView1.Rows[rowIndex].Cells["id"].Value;
+                dataGridView1.Rows.RemoveAt(rowIndex);
+                dataGridView1.ClearSelection();
+
+                if (idCellValue != null && int.TryParse(idCellValue.ToString(), out int id))
+                {
+                    dataGridView1.Rows.Clear();
+
+                    string lastName = "";
+                    float lastPrice = 0;
+                    for (int i = 0; i < products.Length; i++)
+                    {
+                        string name = products[i].name;
+                        float price = products[i].price;
+                        Boolean existId = ids.Exists(x => x == products[i].id);
+
+                        if (!existId && lastName != name && lastPrice != price && products[i].fk_purchase_id == null && products[i].id != id)
+                        {
+                            ids.Add(id);
+                            dataGridView1.Rows.Add(products[i].id, name, price);
+                            lastName = name;
+                            lastPrice = price;
+                        }
+                    }
+                    ShoppingCart.products.Add(new ItensPurchase(id));
+                }
+                else
+                {
+                    Console.WriteLine("O valor da célula na coluna 'id' da linha selecionada não pode ser convertido para um inteiro.");
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CreateProduct nw = new CreateProduct();
+            nw.Show();
+            Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            CreatePurchase nw = new CreatePurchase();
+            nw.Show();
+            Hide();
+        }
+
+        private async void GetUser()
         {
             if (File.Exists("user.json"))
             {
@@ -69,16 +129,30 @@ namespace client_desktop
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private async void GetProducts()
         {
-            Console.WriteLine("Hello World");
-        }
+            productGET request = new productGET();
+            Task<object> task = request.GetProducts();
+            object result = await task;
+            if (result is ProductEntity[] all)
+            {
+                products = all;
+                string lastName = "";
+                float lastPrice = 0;
+                for (int i = 0; i < products.Length; i++)
+                {
+                    string name = products[i].name;
+                    float price = products[i].price;
+                    int id = products[i].id;
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            CreateProduct nw = new CreateProduct();
-            nw.Show();
-            Hide();
+                    if (lastName != name && lastPrice != price && products[i].fk_purchase_id == null)
+                    {
+                        dataGridView1.Rows.Add(id, name, price);
+                        lastName = name;
+                        lastPrice = price;
+                    }
+                }
+            }
         }
     }
 }

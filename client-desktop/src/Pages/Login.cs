@@ -1,5 +1,4 @@
 ﻿using client_desktop.Models;
-using client_desktop.User.Entities;
 using client_desktop.user.Requests;
 using Newtonsoft.Json;
 using System;
@@ -40,6 +39,13 @@ namespace client_desktop.Pages
             Msg message = (Msg)result;
             string msg = message.msg;
             MessageBox.Show(msg, "ERRO AO VERIFICAR SE REGISTRAR");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HOME nw = new HOME();
+            nw.Show();
+            Hide();
         }
     }
 }
