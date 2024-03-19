@@ -42,7 +42,11 @@ export class ProductService {
 	}
 
 	async findAll(): Promise<Product[]> {
-		return await this.prisma.product.findMany({ orderBy: { id: "desc" } });
+		return await this.prisma.product.findMany({
+			where:{
+				fk_purchase_id: null
+		},
+		 orderBy: { id: "desc" } });
 	}
 
 	async findBySeller(email: string): Promise<Product[] | string> {
