@@ -1,6 +1,8 @@
-﻿using client_desktop.Product.Entities;
+﻿using client_desktop.Models;
+using client_desktop.Product.Entities;
 using client_desktop.Product.Requests;
 using client_desktop.src.Product.Entities;
+using client_desktop.user.Requests;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,6 +60,27 @@ namespace client_desktop.Pages
                 Hide();
             }
 
+        }
+
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            if (ShoppingCart.products.Count == 0)
+            {
+                return;
+            }
+
+            productPOST request = new productPOST();
+            Task<object> task = request.CreateProduct();
+            object result = await task;
+            if (result is Msg message)
+            {
+                MessageBox.Show(message.msg, "ERRO AO REALIZAR A COMPRA");
+                return;
+            }
+            MessageBox.Show("COMPRA REALIZADA COM SUCESSO");
+            HOME nw = new HOME();
+            nw.Show();
+            Hide();
         }
     }
 }

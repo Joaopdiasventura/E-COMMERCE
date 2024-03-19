@@ -53,7 +53,6 @@ namespace client_desktop
             {
                 int rowIndex = dataGridView1.SelectedCells[0].RowIndex;
                 object idCellValue = dataGridView1.Rows[rowIndex].Cells["id"].Value;
-                dataGridView1.Rows.RemoveAt(rowIndex);
                 dataGridView1.ClearSelection();
 
                 if (idCellValue != null && int.TryParse(idCellValue.ToString(), out int id))
@@ -80,7 +79,7 @@ namespace client_desktop
                 }
                 else
                 {
-                    Console.WriteLine("O valor da célula na coluna 'id' da linha selecionada não pode ser convertido para um inteiro.");
+                    MessageBox.Show("SELECIONE UM PRODUTO");
                 }
             }
         }

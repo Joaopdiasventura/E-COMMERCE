@@ -32,11 +32,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,22 +80,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 249);
             this.dataGridView1.TabIndex = 3;
             // 
-            // id
-            // 
-            this.id.HeaderText = "Id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Nome:";
-            this.name.Name = "name";
-            // 
-            // price
-            // 
-            this.price.HeaderText = "Preço:";
-            this.price.Name = "price";
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(145, 302);
@@ -115,6 +99,23 @@
             this.button5.Text = "REALIZAR COMPRA";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Nome:";
+            this.name.Name = "name";
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Preço:";
+            this.price.Name = "price";
             // 
             // HOME
             // 
