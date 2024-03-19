@@ -114,7 +114,7 @@ namespace client_desktop
                     UserStatic.password = savedUser.password;
                     UserStatic.adress = savedUser.adress;
                     UserStatic.money = savedUser.money;
-                    label1.Text = $"Olá {UserStatic.name}";
+                    label1.Text = $"Olá {UserStatic.name} R$ {UserStatic.money}";
                     return;
                 }
                 Msg message = (Msg)result;

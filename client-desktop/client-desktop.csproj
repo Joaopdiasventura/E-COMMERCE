@@ -86,10 +86,6 @@
     <Compile Include="src\Product\Requests\productPOST.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\Purchase\Entities\getPurchase.cs" />
-    <Compile Include="src\Purchase\Entities\Purchase.cs" />
-    <Compile Include="src\Purchase\Requests\purchaseGET.cs" />
-    <Compile Include="src\Purchase\Requests\purchasePOST.cs" />
     <Compile Include="src\User\Dto%27s\createUserDto.cs" />
     <Compile Include="src\User\Dto%27s\loginUserDto.cs" />
     <Compile Include="src\User\Entities\Adress.cs" />
@@ -137,7 +133,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\Product\Dto%27s\" />
-    <Folder Include="src\Purchase\Dto%27s\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
