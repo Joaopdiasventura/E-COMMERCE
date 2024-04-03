@@ -1,10 +1,7 @@
 ﻿using client_desktop.Models;
 using client_desktop.src.Product.Entities;
-using client_desktop.src.User.Entities;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +16,7 @@ namespace client_desktop.Product.Requests
             string url = $"https://e-commerce-r4j0.onrender.com/purchase";
             try
             {
-                ShoppingCart Request = new ShoppingCart();
+                PurchaseRequest Request = new PurchaseRequest();
                 string jsonRequest = JsonConvert.SerializeObject(Request);
                 HttpContent content = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
 
