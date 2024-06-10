@@ -45,7 +45,7 @@ export class ProductController {
 
 	@Get("/id/:id")
 	async findOne(@Param("id") id: string, @Res() res: FastifyReply){
-		const result = await this.productService.findOne(parseInt(id));
+		const result = await this.productService.findOne(id);
 		if (typeof result == "string")
 			return res.status(HttpStatus.BAD_REQUEST).send({ msg: result });
 

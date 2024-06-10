@@ -1,5 +1,5 @@
 export class Purchase {
-	id: number;
+	id: string;
 	value: number;
 	fk_user_email: string;
 }

@@ -65,7 +65,7 @@ export class ProductService {
 		}
 	}
 
-	async findOne(id:number): Promise<Product | string> {
+	async findOne(id:string): Promise<Product | string> {
 		try {
 			const product = await this.prisma.product.findUnique({where: {id}});
 			if(!product) return "Produto não encontrado";

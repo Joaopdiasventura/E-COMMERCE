@@ -3,15 +3,15 @@ generator client {
 }
 
 datasource db {
-  provider = "postgres"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  name     String     @db.VarChar(30)
-  email    String     @id @db.VarChar(50)
-  password String     @db.VarChar(100)
-  adress   String     @db.VarChar(13)
+  name     String
+  email    String     @id @map("_id")
+  password String
+  adress   String
   money    Float      @default(1000.0)
   isAdm    Boolean    @default(false)
   Purchase Purchase[]
@@ -19,20 +19,20 @@ model User {
 }
 
 model Product {
-  id             Int       @id @default(autoincrement())
-  name           String    @db.VarChar(20)
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  name           String
   price          Float
-  description    String    @db.VarChar(75)
-  fk_user_email  String    @db.VarChar(50)
-  fk_purchase_id Int?
-  User           User?     @relation(fields: [fk_user_email], references: [email])
-  Purchase       Purchase? @relation(fields: [fk_purchase_id], references: [id])
+  description    String
+  fk_user_email  String
+  fk_purchase_id String   @db.ObjectId
+  User           User     @relation(fields: [fk_user_email], references: [email])
+  Purchase       Purchase @relation(fields: [fk_purchase_id], references: [id])
 }
 
 model Purchase {
-  id            Int       @id @default(autoincrement())
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
   value         Float     @default(0.0)
-  fk_user_email String    @db.VarChar(50)
-  User          User?     @relation(fields: [fk_user_email], references: [email])
+  fk_user_email String
+  User          User      @relation(fields: [fk_user_email], references: [email])
   Product       Product[]
 }
