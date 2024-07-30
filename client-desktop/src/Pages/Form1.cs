@@ -104,7 +104,7 @@ namespace client_desktop
             {
                 string savedJson = File.ReadAllText("user.json");
                 TokenEntity Token = JsonConvert.DeserializeObject<TokenEntity>(savedJson);
-                userGET request = new userGET();
+                UserGET request = new UserGET();
                 Task<object> task = request.Decode(Token.token);
                 object result = await task;
                 if (result is UserEntity savedUser)

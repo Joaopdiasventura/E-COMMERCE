@@ -1,5 +1,5 @@
 ﻿using client_desktop.Models;
-using client_desktop.user.Requests;
+using client_desktop.user.service;
 using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
@@ -23,7 +23,7 @@ namespace client_desktop.Pages
                 MessageBox.Show("PREENCHA TODOS OS CAMPOS ANTES DE SE REGISTRAR", "ERRO AO SE REGISTRAR");
                 return;
             }
-            userPOST request = new userPOST();
+            UserService request = new UserService();
             Task<object> task = request.Login(emailInput.Text, passwordInput.Text);
             object result = await task;
             if (result is TokenEntity user)

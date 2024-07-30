@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace client_desktop.User.Requests
 {
-    internal class userGET
+    internal class UserGET
     {
         public async Task<object> FindAdress(string cep)
         {

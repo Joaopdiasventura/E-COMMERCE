@@ -2,7 +2,7 @@
 using client_desktop.Product.Entities;
 using client_desktop.Product.Requests;
 using client_desktop.src.Product.Entities;
-using client_desktop.user.Requests;
+using client_desktop.user.service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

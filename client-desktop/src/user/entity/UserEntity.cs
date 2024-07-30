@@ -1,9 +1,4 @@
 ﻿using client_desktop.Product.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace client_desktop.User.Entities
 {
@@ -14,6 +9,7 @@ namespace client_desktop.User.Entities
         public string password;
         public string adress;
         public float money;
+        public bool isAdm;
     }
 
     public class UserStatic
