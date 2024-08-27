@@ -4,7 +4,7 @@ namespace client_web.src.services
 {
     public class Conection
     {
-        public MySqlConnection con = new MySqlConnection(@"server=localhost;port=3306;Database=ecommerce;User=root;Pwd=1234");
+        public MySqlConnection con = new MySqlConnection(@"server=localhost;port=3306;Database=ecommerce;User=root;Pwd=");
 
         public string Conect()
         {

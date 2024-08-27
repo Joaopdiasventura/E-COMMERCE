@@ -19,7 +19,7 @@ namespace client_desktop.user.service
 
         public UserEntity findByEmail(string email)
         {
-            string q = "SELECT `name`, `email`, `password`, `address`, `money`, `isAdm` FROM `User` WHERE `email` = @Email";
+            string q = "SELECT * FROM `User` WHERE `email` = @Email";
             using (MySqlCommand cmd = new MySqlCommand(q, c.con))
             {
                 cmd.Parameters.AddWithValue("@Email", email);
@@ -36,7 +36,7 @@ namespace client_desktop.user.service
                             user.name = reader.GetString("name");
                             user.email = reader.GetString("email");
                             user.password = reader.GetString("password");
-                            user.adress = reader.GetString("address");
+                            user.adress = reader.GetString("adress");
                             user.money = reader.GetFloat("money");
                             user.isAdm = reader.GetBoolean("isAdm");
                             
@@ -69,13 +69,13 @@ namespace client_desktop.user.service
                 MessageBox.Show("Já existe um usuário com esse email", "Erro:");
                 return null;
             }
-            string q = "INSERT INTO `User` (`name`, `email`, `password`, `address`) VALUES (@name, @email, @password, @address);";
+            string q = "INSERT INTO `User` (`name`, `email`, `password`, `adress`) VALUES (@name, @email, @password, @adress);";
             using (MySqlCommand cmd = new MySqlCommand(q, c.con))
             {
                 cmd.Parameters.AddWithValue("@name", name);
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@password", password);
-                cmd.Parameters.AddWithValue("@address", address);
+                cmd.Parameters.AddWithValue("@adress", address);
 
                 try
                 {
@@ -85,7 +85,7 @@ namespace client_desktop.user.service
                 }
                 catch (MySqlException e)
                 {
-                    MessageBox.Show("eRRO AO CRIAR USUÁRIO");
+                    MessageBox.Show("ERRO AO CRIAR USUÁRIO");
                     Console.WriteLine(e.Message);
                     return null;
                 }
