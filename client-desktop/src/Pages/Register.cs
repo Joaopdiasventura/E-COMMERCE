@@ -1,7 +1,6 @@
 ﻿using client_desktop.Models;
 using client_desktop.user.service;
 using client_desktop.User.Entities;
-using client_desktop.User.Requests;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -10,6 +9,8 @@ namespace client_desktop.Pages
 {
     public partial class Register : Form
     {
+
+        readonly UserService request = new UserService();
         public Register()
         {
             InitializeComponent();
@@ -20,12 +21,10 @@ namespace client_desktop.Pages
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            UserGET request = new UserGET();
             Task<object> resultTask = request.FindAdress(cepInput.Text);
             object result = await resultTask;
-            if (result is Adress)
+            if (result is Adress adress)
             {
-                Adress adress = (Adress)result;
                 cepLabel.Text = $"{adress.street} - {adress.neighborhood} - {adress.city}";
                 isCepVerifi = true;
                 cep = cepInput.Text;
@@ -36,7 +35,7 @@ namespace client_desktop.Pages
             MessageBox.Show(msg, "ERRO AO VERIFICAR O CEP");
         }
 
-        private async void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             if (!isCepVerifi)
             {
@@ -48,8 +47,6 @@ namespace client_desktop.Pages
                 MessageBox.Show("PREENCHA TODOS OS CAMPOS ANTES DE SE REGISTRAR", "ERRO AO SE REGISTRAR");
                 return;
             }
-
-            UserService request = new UserService();
             string task = request.Register(emailInput.Text, nameInput.Text, passwordInput.Text, (cep + numberInput.Text));
             if (task != null)
             {

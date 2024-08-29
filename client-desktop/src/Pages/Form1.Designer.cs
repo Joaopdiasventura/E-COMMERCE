@@ -32,11 +32,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,26 +81,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 249);
             this.dataGridView1.TabIndex = 3;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(145, 302);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(182, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "ADICIONAR ITEM NO CARRINHO";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(174, 331);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "REALIZAR COMPRA";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // id
             // 
             this.id.HeaderText = "Id";
@@ -117,11 +98,42 @@
             this.price.HeaderText = "Preço:";
             this.price.Name = "price";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(143, 302);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(182, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "ADICIONAR ITEM NO CARRINHO";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(171, 360);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(123, 23);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "REALIZAR COMPRA";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(161, 331);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(146, 23);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "ADICIONAR PRODUTO";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // HOME
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
@@ -149,6 +161,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.Button button6;
     }
 }
 

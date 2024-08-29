@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using client_desktop.Models;
-using client_desktop.src.User.Entities;
-using client_desktop.User.Dto_s;
+using client_desktop.User.Entities;
+using client_web.src.services;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
-using client_web.src.services;
-using client_desktop.User.Entities;
-using System.Windows.Forms;
 
 namespace client_desktop.user.service
 {
@@ -39,7 +36,7 @@ namespace client_desktop.user.service
                             user.adress = reader.GetString("adress");
                             user.money = reader.GetFloat("money");
                             user.isAdm = reader.GetBoolean("isAdm");
-                            
+
                             return user;
                         }
                         else
@@ -59,7 +56,6 @@ namespace client_desktop.user.service
                 }
             }
         }
-
 
         public string Register(string email, string name, string password, string address)
         {
@@ -96,22 +92,65 @@ namespace client_desktop.user.service
             }
         }
 
-        public async Task<object> Login(string email, string password){
-            HttpClient client = new HttpClient();
-            var userDto = new loginUserDto(email, password);
-            string url = "https://e-commerce-r4j0.onrender.com/user/login";
+        public UserEntity Login(string email, string password)
+        {
+            string q = "SELECT * FROM `User` WHERE `email` = @Email AND `password` = @Password";
+            using (MySqlCommand cmd = new MySqlCommand(q, c.con))
+            {
+                cmd.Parameters.AddWithValue("@Email", email);
+                cmd.Parameters.AddWithValue("@Password", password);
 
+                try
+                {
+                    c.Conect();
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            UserEntity user = new UserEntity
+                            {
+                                name = reader.GetString("name"),
+                                email = reader.GetString("email"),
+                                password = reader.GetString("password"),
+                                adress = reader.GetString("adress"),
+                                money = reader.GetFloat("money"),
+                                isAdm = reader.GetBoolean("isAdm")
+                            };
+
+                            return user;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuário ou senha incorretos", "Erro:");
+                            return null;
+                        }
+                    }
+                }
+                catch (MySqlException e)
+                {
+                    MessageBox.Show("Erro ao realizar login", "Erro:" + e.Message.ToString());
+                    Console.WriteLine(e.Message);
+                    return null;
+                }
+                finally
+                {
+                    c.Disconnect();
+                }
+            }
+        }
+        public async Task<object> FindAdress(string cep)
+        {
+            HttpClient client = new HttpClient();
+            string url = $"https://e-commerce-r4j0.onrender.com/adress/findAdress/{cep}";
             try
             {
-                string jsonRequest = JsonConvert.SerializeObject(userDto);
-                HttpContent content = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await client.GetAsync(url);
 
-                HttpResponseMessage response = await client.PostAsync(url, content);
                 string jsonResponse = await response.Content.ReadAsStringAsync();
 
                 if (response.IsSuccessStatusCode)
                 {
-                    TokenEntity data = JsonConvert.DeserializeObject<TokenEntity>(jsonResponse);
+                    Adress data = JsonConvert.DeserializeObject<Adress>(jsonResponse);
                     return data;
                 }
                 else
@@ -122,8 +161,10 @@ namespace client_desktop.user.service
             }
             catch (Exception ex)
             {
-                Msg message = new Msg();
-                message.msg = ex.Message;
+                Msg message = new Msg
+                {
+                    msg = ex.Message
+                };
                 return message;
             }
         }
