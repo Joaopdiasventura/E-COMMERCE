@@ -1,4 +1,3 @@
-drop database ecommerce;
 
 create database ecommerce;
 use ecommerce;
@@ -27,9 +26,15 @@ CREATE TABLE Product (
     price FLOAT NOT NULL,
     description TEXT NOT NULL,
     fk_user_email VARCHAR(255) NOT NULL,
+    FOREIGN KEY (fk_user_email) REFERENCES User(email)
+);
+
+CREATE TABLE Product_Purchase (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    fk_product_id INT NOT NULL,
     fk_purchase_id INT NOT NULL,
-    FOREIGN KEY (fk_user_email) REFERENCES User(email),
+    FOREIGN KEY (fk_product_id) REFERENCES Product(id),
     FOREIGN KEY (fk_purchase_id) REFERENCES Purchase(id)
 );
 
-delete from user where email = "jojo@gmail.com";
+select * from product;

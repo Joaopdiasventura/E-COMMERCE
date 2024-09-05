@@ -1,6 +1,6 @@
 ﻿using client_desktop.Pages;
 using client_desktop.Product.Entities;
-using client_desktop.Product.Requests;
+using client_desktop.src.Product;
 using client_desktop.src.Product.Entities;
 using client_desktop.user.service;
 using client_desktop.User.Entities;
@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading.Tasks;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace client_desktop
@@ -16,7 +16,7 @@ namespace client_desktop
     public partial class HOME : Form
 
     {
-        public static ProductEntity[] products;
+        public static List<ProductEntity> products = new List<ProductEntity>();
         public static List<int> ids = new List<int>();
 
         public HOME()
@@ -55,25 +55,22 @@ namespace client_desktop
 
                 if (idCellValue != null && int.TryParse(idCellValue.ToString(), out int id))
                 {
-                    dataGridView1.Rows.Clear();
-
-                    string lastName = "";
-                    float lastPrice = 0;
-                    for (int i = 0; i < products.Length; i++)
+                    if (!ShoppingCart.products.Any(item => item.fk_product_id == id))
                     {
-                        string name = products[i].name;
-                        float price = products[i].price;
-                        Boolean existId = ids.Exists(x => x == products[i].id);
+                        ShoppingCart.products.Add(new ItensPurchase(id));
 
-                        if (!existId && lastName != name && lastPrice != price && products[i].fk_purchase_id == null && products[i].id != id)
+                        ids.Add(id);
+
+                        dataGridView1.Rows.Clear();
+                        foreach (var product in products)
                         {
-                            ids.Add(id);
-                            dataGridView1.Rows.Add(products[i].id, name, price);
-                            lastName = name;
-                            lastPrice = price;
+                            dataGridView1.Rows.Add(product.id, product.name, product.price);
                         }
                     }
-                    ShoppingCart.products.Add(new ItensPurchase(id));
+                    else
+                    {
+                        MessageBox.Show("O produto já foi adicionado ao carrinho.");
+                    }
                 }
                 else
                 {
@@ -81,6 +78,7 @@ namespace client_desktop
                 }
             }
         }
+
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -138,28 +136,25 @@ namespace client_desktop
         }
 
 
-        private async void GetProducts()
+        private void GetProducts()
         {
-            productGET request = new productGET();
-            Task<object> task = request.GetProducts();
-            object result = await task;
-            if (result is ProductEntity[] all)
-            {
-                products = all;
-                string lastName = "";
-                float lastPrice = 0;
-                for (int i = 0; i < products.Length; i++)
-                {
-                    string name = products[i].name;
-                    float price = products[i].price;
-                    int id = products[i].id;
+            ProductService service = new ProductService();
+            List<ProductEntity> result = service.GetTop10Products();
+            string lastName = "";
+            float lastPrice = 0;
 
-                    if (lastName != name && lastPrice != price && products[i].fk_purchase_id == null)
-                    {
-                        dataGridView1.Rows.Add(id, name, price);
-                        lastName = name;
-                        lastPrice = price;
-                    }
+            foreach (var product in result)
+            {
+                string name = product.name;
+                float price = product.price;
+                int id = product.id;
+
+                if (lastName != name && lastPrice != price && product.fk_purchase_id == null)
+                {
+                    dataGridView1.Rows.Add(id, name, price);
+                    products.Add(product);
+                    lastName = name;
+                    lastPrice = price;
                 }
             }
         }
