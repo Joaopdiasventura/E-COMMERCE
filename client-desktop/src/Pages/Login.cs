@@ -1,11 +1,8 @@
-﻿using client_desktop.Models;
-using client_desktop.user.service;
+﻿using client_desktop.user.service;
 using Newtonsoft.Json;
 using System;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using client_desktop.src.User.Entities;
 using client_desktop.User.Entities;
 
 namespace client_desktop.Pages
@@ -31,7 +28,7 @@ namespace client_desktop.Pages
             if (user != null)
             {
                 string filePath = "user.json";
-                string json = JsonConvert.SerializeObject(user);
+                string json = JsonConvert.SerializeObject(new { user.email });
                 File.WriteAllText(filePath, json);
 
                 HOME nw = new HOME();

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using client_desktop.Product.Entities;
 using client_desktop.src.Product.Entities;
 using client_desktop.User.Entities;
 
@@ -7,7 +8,7 @@ namespace client_desktop.src.Product.Entities
     public class ShoppingCart
     {
         static public string fk_user_email = UserStatic.email;
-        static public List<ItensPurchase> products = new List<ItensPurchase>();
+        static public List<ProductEntity> products = new List<ProductEntity>();
     }
 }
 
@@ -23,5 +24,5 @@ public class ItensPurchase
 public class PurchaseRequest
 {
     public string fk_user_email = UserStatic.email;
-    public List<ItensPurchase> products = ShoppingCart.products;
+    public List<ProductEntity> products = ShoppingCart.products;
 }

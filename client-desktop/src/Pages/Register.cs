@@ -1,8 +1,10 @@
 ﻿using client_desktop.Models;
 using client_desktop.user.service;
 using client_desktop.User.Entities;
+using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace client_desktop.Pages
@@ -51,6 +53,12 @@ namespace client_desktop.Pages
             if (task != null)
             {
                 MessageBox.Show(task, "Boa");
+                string filePath = "user.json";
+                string json = JsonConvert.SerializeObject( new { email = emailInput.Text } );
+                File.WriteAllText(filePath, json);
+                HOME nw = new HOME();
+                nw.Show();
+                Hide();
             }
         }
 

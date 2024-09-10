@@ -4,11 +4,11 @@ using client_desktop.src.Product;
 using client_desktop.src.Product.Entities;
 using client_desktop.user.service;
 using client_desktop.User.Entities;
+using MySqlX.XDevAPI.Common;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace client_desktop
@@ -55,21 +55,26 @@ namespace client_desktop
 
                 if (idCellValue != null && int.TryParse(idCellValue.ToString(), out int id))
                 {
-                    if (!ShoppingCart.products.Any(item => item.fk_product_id == id))
+                    ShoppingCart.products.Add(products.Find((prod) => prod.id == id));
+                    products.RemoveAll(prod => prod.id == id);
+                    ids.Add(id);
+
+                    dataGridView1.Rows.Clear();
+                    string lastName = "";
+                    float lastPrice = 0;
+
+                    foreach (var product in products)
                     {
-                        ShoppingCart.products.Add(new ItensPurchase(id));
+                        string name = product.name;
+                        float price = product.price;
+                        int Id = product.id;
 
-                        ids.Add(id);
-
-                        dataGridView1.Rows.Clear();
-                        foreach (var product in products)
+                        if (lastName != name && lastPrice != price && product.fk_purchase_id == null)
                         {
-                            dataGridView1.Rows.Add(product.id, product.name, product.price);
+                            dataGridView1.Rows.Add(Id, name, price);
+                            lastName = name;
+                            lastPrice = price;
                         }
-                    }
-                    else
-                    {
-                        MessageBox.Show("O produto já foi adicionado ao carrinho.");
                     }
                 }
                 else
@@ -139,7 +144,7 @@ namespace client_desktop
         private void GetProducts()
         {
             ProductService service = new ProductService();
-            List<ProductEntity> result = service.GetTop10Products();
+            List<ProductEntity> result = service.GetProducts();
             string lastName = "";
             float lastPrice = 0;
 
@@ -148,11 +153,11 @@ namespace client_desktop
                 string name = product.name;
                 float price = product.price;
                 int id = product.id;
+                products.Add(product);
 
                 if (lastName != name && lastPrice != price && product.fk_purchase_id == null)
                 {
                     dataGridView1.Rows.Add(id, name, price);
-                    products.Add(product);
                     lastName = name;
                     lastPrice = price;
                 }

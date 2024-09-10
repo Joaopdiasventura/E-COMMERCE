@@ -1,6 +1,7 @@
 ﻿using client_desktop.Models;
 using client_desktop.Product.Entities;
 using client_desktop.Product.Requests;
+using client_desktop.src.Product;
 using client_desktop.src.Product.Entities;
 using client_desktop.user.service;
 using System;
@@ -23,18 +24,12 @@ namespace client_desktop.Pages
         }
         float value = 0;
 
-        private async void CreatePurchase_Load(object sender, EventArgs e)
+        private void CreatePurchase_Load(object sender, EventArgs e)
         {
-            foreach (ItensPurchase item in ShoppingCart.products)
+            foreach (ProductEntity product in ShoppingCart.products)
             {
-                productGET request = new productGET();
-                Task<object> task = request.GetProduct(item.fk_product_id);
-                object result = await task;
-                if (result is ProductEntity product)
-                {
-                    value += product.price;
-                    dataGridView1.Rows.Add(product.name, product.price, product.description);
-                }
+                value += product.price;
+                dataGridView1.Rows.Add(product.name, product.price, product.description);
             }
             label1.Text = $"Valor Total: R$ {value}";
         }
@@ -59,25 +54,17 @@ namespace client_desktop.Pages
                 nw.Show();
                 Hide();
             }
-
         }
 
-        private async void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             if (ShoppingCart.products.Count == 0)
             {
                 return;
             }
 
-            productPOST request = new productPOST();
-            Task<object> task = request.CreateProduct();
-            object result = await task;
-            if (result is Msg message)
-            {
-                MessageBox.Show(message.msg, "ERRO AO REALIZAR A COMPRA");
-                return;
-            }
-            MessageBox.Show("COMPRA REALIZADA COM SUCESSO");
+            ProductService productService = new ProductService();
+            productService.CreatePurchase(ShoppingCart.products);
             HOME nw = new HOME();
             nw.Show();
             Hide();
