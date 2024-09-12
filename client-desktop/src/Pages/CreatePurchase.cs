@@ -65,6 +65,7 @@ namespace client_desktop.Pages
 
             ProductService productService = new ProductService();
             productService.CreatePurchase(ShoppingCart.products);
+            ShoppingCart.products.Clear();
             HOME nw = new HOME();
             nw.Show();
             Hide();

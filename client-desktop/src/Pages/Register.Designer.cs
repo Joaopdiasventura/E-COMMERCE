@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -126,6 +127,7 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImage = global::client_desktop.Properties.Resources.preto;
             this.button1.Location = new System.Drawing.Point(15, 168);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 23);
@@ -136,6 +138,7 @@
             // 
             // button2
             // 
+            this.button2.BackgroundImage = global::client_desktop.Properties.Resources.preto;
             this.button2.Location = new System.Drawing.Point(12, 236);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 23);
@@ -154,6 +157,7 @@
             // 
             // button3
             // 
+            this.button3.BackgroundImage = global::client_desktop.Properties.Resources.preto;
             this.button3.Location = new System.Drawing.Point(325, 426);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(147, 23);
@@ -166,6 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.cepLabel);
@@ -181,6 +186,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
