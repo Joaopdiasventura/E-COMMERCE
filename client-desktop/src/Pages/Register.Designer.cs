@@ -92,6 +92,8 @@
             // 
             // nameInput
             // 
+            this.nameInput.BackColor = System.Drawing.Color.Black;
+            this.nameInput.ForeColor = System.Drawing.Color.White;
             this.nameInput.Location = new System.Drawing.Point(15, 25);
             this.nameInput.Name = "nameInput";
             this.nameInput.Size = new System.Drawing.Size(100, 20);
@@ -99,6 +101,8 @@
             // 
             // emailInput
             // 
+            this.emailInput.BackColor = System.Drawing.Color.Black;
+            this.emailInput.ForeColor = System.Drawing.Color.White;
             this.emailInput.Location = new System.Drawing.Point(15, 64);
             this.emailInput.Name = "emailInput";
             this.emailInput.Size = new System.Drawing.Size(100, 20);
@@ -106,6 +110,8 @@
             // 
             // passwordInput
             // 
+            this.passwordInput.BackColor = System.Drawing.Color.Black;
+            this.passwordInput.ForeColor = System.Drawing.Color.White;
             this.passwordInput.Location = new System.Drawing.Point(15, 103);
             this.passwordInput.Name = "passwordInput";
             this.passwordInput.Size = new System.Drawing.Size(100, 20);
@@ -113,6 +119,8 @@
             // 
             // cepInput
             // 
+            this.cepInput.BackColor = System.Drawing.Color.Black;
+            this.cepInput.ForeColor = System.Drawing.Color.White;
             this.cepInput.Location = new System.Drawing.Point(15, 142);
             this.cepInput.Name = "cepInput";
             this.cepInput.Size = new System.Drawing.Size(100, 20);
@@ -120,6 +128,8 @@
             // 
             // numberInput
             // 
+            this.numberInput.BackColor = System.Drawing.Color.Black;
+            this.numberInput.ForeColor = System.Drawing.Color.White;
             this.numberInput.Location = new System.Drawing.Point(15, 210);
             this.numberInput.Name = "numberInput";
             this.numberInput.Size = new System.Drawing.Size(100, 20);
@@ -128,6 +138,7 @@
             // button1
             // 
             this.button1.BackgroundImage = global::client_desktop.Properties.Resources.preto;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(15, 168);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 23);
@@ -139,6 +150,7 @@
             // button2
             // 
             this.button2.BackgroundImage = global::client_desktop.Properties.Resources.preto;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Location = new System.Drawing.Point(12, 236);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 23);
@@ -158,6 +170,7 @@
             // button3
             // 
             this.button3.BackgroundImage = global::client_desktop.Properties.Resources.preto;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Location = new System.Drawing.Point(325, 426);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(147, 23);
@@ -190,7 +203,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Register";
+            this.Text = "CRIAR CONTA";
             this.ResumeLayout(false);
             this.PerformLayout();
 

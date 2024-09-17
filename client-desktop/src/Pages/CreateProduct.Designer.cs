@@ -24,6 +24,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateProduct));
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
@@ -38,21 +39,27 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(120, 30);
+            this.txtName.BackColor = System.Drawing.Color.Black;
+            this.txtName.ForeColor = System.Drawing.Color.White;
+            this.txtName.Location = new System.Drawing.Point(138, 105);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(250, 20);
             this.txtName.TabIndex = 0;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(120, 70);
+            this.txtPrice.BackColor = System.Drawing.Color.Black;
+            this.txtPrice.ForeColor = System.Drawing.Color.White;
+            this.txtPrice.Location = new System.Drawing.Point(138, 145);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(250, 20);
             this.txtPrice.TabIndex = 1;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(120, 110);
+            this.txtDescription.BackColor = System.Drawing.Color.Black;
+            this.txtDescription.ForeColor = System.Drawing.Color.White;
+            this.txtDescription.Location = new System.Drawing.Point(138, 185);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(250, 80);
@@ -61,7 +68,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(30, 33);
+            this.lblName.Location = new System.Drawing.Point(48, 108);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(93, 13);
             this.lblName.TabIndex = 3;
@@ -70,7 +77,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(30, 73);
+            this.lblPrice.Location = new System.Drawing.Point(48, 148);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(38, 13);
             this.lblPrice.TabIndex = 4;
@@ -79,7 +86,7 @@
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(30, 113);
+            this.lblDescription.Location = new System.Drawing.Point(48, 188);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(58, 13);
             this.lblDescription.TabIndex = 5;
@@ -87,7 +94,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(120, 268);
+            this.btnSave.BackgroundImage = global::client_desktop.Properties.Resources.preto;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Location = new System.Drawing.Point(138, 343);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 6;
@@ -97,7 +106,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(284, 268);
+            this.button1.BackgroundImage = global::client_desktop.Properties.Resources.preto;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(302, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 23);
             this.button1.TabIndex = 7;
@@ -108,7 +119,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 222);
+            this.label1.Location = new System.Drawing.Point(48, 297);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 8;
@@ -116,7 +127,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 215);
+            this.textBox1.BackColor = System.Drawing.Color.Black;
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(138, 290);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(250, 20);
             this.textBox1.TabIndex = 9;
@@ -125,7 +138,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 323);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -136,9 +150,11 @@
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtName);
+            this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Create Product";
+            this.Text = "CRIAR PRODUTO";
             this.ResumeLayout(false);
             this.PerformLayout();
 

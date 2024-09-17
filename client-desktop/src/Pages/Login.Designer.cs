@@ -40,6 +40,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
@@ -48,6 +49,8 @@
             // 
             // emailInput
             // 
+            this.emailInput.BackColor = System.Drawing.Color.Black;
+            this.emailInput.ForeColor = System.Drawing.Color.White;
             this.emailInput.Location = new System.Drawing.Point(12, 25);
             this.emailInput.Name = "emailInput";
             this.emailInput.Size = new System.Drawing.Size(100, 20);
@@ -55,6 +58,8 @@
             // 
             // passwordInput
             // 
+            this.passwordInput.BackColor = System.Drawing.Color.Black;
+            this.passwordInput.ForeColor = System.Drawing.Color.White;
             this.passwordInput.Location = new System.Drawing.Point(12, 64);
             this.passwordInput.Name = "passwordInput";
             this.passwordInput.Size = new System.Drawing.Size(100, 20);
@@ -63,6 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(9, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
@@ -71,6 +77,8 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImage = global::client_desktop.Properties.Resources.preto;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(12, 90);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 23);
@@ -81,6 +89,8 @@
             // 
             // button2
             // 
+            this.button2.BackgroundImage = global::client_desktop.Properties.Resources.preto;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Location = new System.Drawing.Point(325, 426);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(147, 23);
@@ -93,6 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -100,10 +111,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.emailInput);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = "ENTRAR";
             this.ResumeLayout(false);
             this.PerformLayout();
 

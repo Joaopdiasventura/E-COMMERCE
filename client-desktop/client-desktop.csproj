@@ -135,8 +135,6 @@
     <Compile Include="src\Product\Entities\ProductEntity.cs" />
     <Compile Include="src\Product\Entities\ShoppingCart.cs" />
     <Compile Include="src\Product\ProductService.cs" />
-    <Compile Include="src\Product\Requests\productGET.cs" />
-    <Compile Include="src\Product\Requests\productPOST.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\services\Conection.cs" />
