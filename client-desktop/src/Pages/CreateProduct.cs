@@ -32,6 +32,9 @@ namespace client_desktop.Pages
             if (result == "Produto criado com sucesso!")
             {
                 MessageBox.Show(result, "Sucesso");
+                HOME nw = new HOME();
+                nw.Show();
+                Hide();
             }
             else
             {

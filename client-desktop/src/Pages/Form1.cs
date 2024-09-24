@@ -76,6 +76,7 @@ namespace client_desktop
                             lastPrice = price;
                         }
                     }
+                    MessageBox.Show("PRODUTO ADICIONADO COM SUCESSO");
                 }
                 else
                 {

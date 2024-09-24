@@ -102,6 +102,11 @@ namespace client_desktop.src.Product
                 totalValue += product.price;
             }
 
+            if (totalValue > UserStatic.money)
+            {
+                return "Saldo insuficiente para a compra";
+            }
+
             c.Conect();
             using (var transaction = c.con.BeginTransaction())
             {
@@ -155,7 +160,7 @@ namespace client_desktop.src.Product
                         }
                     }
                     transaction.Commit();
-                    return "Compra criada com sucesso!";
+                    return "Compra realizada com sucesso!";
                 }
                 catch (MySqlException e)
                 {
