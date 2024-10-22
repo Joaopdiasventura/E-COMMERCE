@@ -138,6 +138,7 @@ namespace client_desktop
             {
                 label1.Text = "Faça login para adicionar um produto no carrinho";
                 button3.Visible = false;
+                button4.Visible = false;
             }
         }
 
@@ -170,6 +171,34 @@ namespace client_desktop
             CreateProduct nw = new CreateProduct();
             nw.Show();
             Hide();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            label1.Text = "Faça login para adicionar um produto no carrinho";
+            UserStatic.email = null;
+            UserStatic.name = null;
+            UserStatic.adress = null;
+            UserStatic.money = 0;
+
+            string filePath = "user.json";
+
+            try
+            {
+                if (File.Exists(filePath))
+                {
+                    File.Delete(filePath);
+                }
+                else
+                {
+                    Console.WriteLine("O arquivo não existe.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ocorreu um erro: {ex.Message}");
+            }
+            button4.Visible = false;
         }
     }
 }
