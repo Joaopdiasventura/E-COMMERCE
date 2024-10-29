@@ -7,7 +7,6 @@ namespace client_desktop.User.Entities
         public string email;
         public string name;
         public string password;
-        public string adress;
         public float money;
         public bool isAdm;
     }
@@ -17,7 +16,6 @@ namespace client_desktop.User.Entities
         public static string email;
         public static string name;
         public static string password;
-        public static string adress;
         public static float money;
         public static ProductEntity[] shoppingCart;
     }

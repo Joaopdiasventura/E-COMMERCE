@@ -117,7 +117,6 @@ namespace client_desktop
                         UserStatic.email = user.email;
                         UserStatic.name = user.name;
                         UserStatic.password = user.password;
-                        UserStatic.adress = user.adress;
                         UserStatic.money = user.money;
 
                         label1.Text = $"Olá {UserStatic.name}, R$ {UserStatic.money}";
@@ -137,8 +136,11 @@ namespace client_desktop
             else
             {
                 label1.Text = "Faça login para adicionar um produto no carrinho";
+
                 button3.Visible = false;
                 button4.Visible = false;
+                button6.Visible = false;
+                button5.Visible = false;
             }
         }
 
@@ -178,8 +180,11 @@ namespace client_desktop
             label1.Text = "Faça login para adicionar um produto no carrinho";
             UserStatic.email = null;
             UserStatic.name = null;
-            UserStatic.adress = null;
             UserStatic.money = 0;
+            button3.Visible = false;
+            button4.Visible = false;
+            button6.Visible = false;
+            button5.Visible = false;
 
             string filePath = "user.json";
 

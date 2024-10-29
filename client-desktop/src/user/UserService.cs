@@ -33,7 +33,6 @@ namespace client_desktop.user.service
                             user.name = reader.GetString("name");
                             user.email = reader.GetString("email");
                             user.password = reader.GetString("password");
-                            user.adress = reader.GetString("adress");
                             user.money = reader.GetFloat("money");
                             user.isAdm = reader.GetBoolean("isAdm");
 
@@ -57,7 +56,7 @@ namespace client_desktop.user.service
             }
         }
 
-        public string Register(string email, string name, string password, string address)
+        public string Register(string email, string name, string password)
         {
             UserEntity user = findByEmail(email);
             if (user != null)
@@ -65,13 +64,12 @@ namespace client_desktop.user.service
                 MessageBox.Show("Já existe um usuário com esse email", "Erro:");
                 return null;
             }
-            string q = "INSERT INTO `User` (`name`, `email`, `password`, `adress`) VALUES (@name, @email, @password, @adress);";
+            string q = "INSERT INTO `User` (`name`, `email`, `password`) VALUES (@name, @email, @password);";
             using (MySqlCommand cmd = new MySqlCommand(q, c.con))
             {
                 cmd.Parameters.AddWithValue("@name", name);
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@password", password);
-                cmd.Parameters.AddWithValue("@adress", address);
 
                 try
                 {
@@ -112,7 +110,6 @@ namespace client_desktop.user.service
                                 name = reader.GetString("name"),
                                 email = reader.GetString("email"),
                                 password = reader.GetString("password"),
-                                adress = reader.GetString("adress"),
                                 money = reader.GetFloat("money"),
                                 isAdm = reader.GetBoolean("isAdm")
                             };
@@ -121,7 +118,6 @@ namespace client_desktop.user.service
                         }
                         else
                         {
-                            MessageBox.Show("Usuário ou senha incorretos", "Erro:");
                             return null;
                         }
                     }
@@ -136,36 +132,6 @@ namespace client_desktop.user.service
                 {
                     c.Disconnect();
                 }
-            }
-        }
-        public async Task<object> FindAdress(string cep)
-        {
-            HttpClient client = new HttpClient();
-            string url = $"https://e-commerce-r4j0.onrender.com/adress/findAdress/{cep}";
-            try
-            {
-                HttpResponseMessage response = await client.GetAsync(url);
-
-                string jsonResponse = await response.Content.ReadAsStringAsync();
-
-                if (response.IsSuccessStatusCode)
-                {
-                    Adress data = JsonConvert.DeserializeObject<Adress>(jsonResponse);
-                    return data;
-                }
-                else
-                {
-                    Msg data = JsonConvert.DeserializeObject<Msg>(jsonResponse);
-                    return data;
-                }
-            }
-            catch (Exception ex)
-            {
-                Msg message = new Msg
-                {
-                    msg = ex.Message
-                };
-                return message;
             }
         }
     }
